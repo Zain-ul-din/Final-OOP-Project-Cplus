@@ -10,7 +10,10 @@ class Library{ // Parent Class
 	 // paramatrized constructor
 	 Library(string title,string writer,int id):title(title),writer_name(writer),book_id(id){
 		time(&TimeNow); // Set Time to Now
-		publish_time=ctime(&TimeNow); // Time Now to string
+		string str=ctime(&TimeNow); // Time Now to string
+		for(auto it=str.begin();it!=(str.begin()+24);it++){
+  	              publish_time.push_back(*it);// Copy in another string
+                }
 		in_stock=1;
 		totalqt=1;
 	}
