@@ -844,54 +844,47 @@ int main(){
   else{ 	cout<<"\t\t!!Invalid Choice --Exit"<<endl; } // Main Else
   
 /*              Put Data to Files                     */
-    if(!LibP.empty()){// Progarming Book's
-    	ofstream out;
-    	out.open("Data_Base/ProgramingBooks.text",ios_base::out);
-    	if(!out.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
-    	for_each(LibP.begin(),LibP.end(),[&out](auto obj){
-    		out<<obj.To_DataBase()<<endl;
-		});  out.close();
-	} else{
-		ofstream out;
-    	        out.open("Data_Base/ProgramingBooks.text",ios_base::out);
-    	        out.close();
+    
+    	ofstream outa;// Progarming Book's
+    	outa.open("Data_Base/ProgramingBooks.text",ios_base::out);
+    	if(!outa.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
+	    if(!LibP.empty()){
+    	        for_each(LibP.begin(),LibP.end(),[&outa](auto obj){
+    		     outa<<obj.To_DataBase()<<endl;
+		});  
+	    }
+	        outa.close();
+	
+    	ofstream outb;// Medical Book's
+    	outb.open("Data_Base/medicalBooks.text",ios_base::out);
+    	if(!outb.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
+		if(!LibM.empty()){
+    	            for_each(LibM.begin(),LibM.end(),[&outb](auto obj){
+    		            outb<<obj.To_DataBase()<<endl;
+		    });
+	  }
+	       outb.close();
+	
+    	ofstream outc;// History book's
+    	outc.open("Data_Base/HistoryBooks.text",ios_base::out);
+    	if(!outc.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
+	if(!LibH.empty()){
+    	        for_each(LibH.begin(),LibH.end(),[&outc](auto obj){
+    		     outc<<obj.To_DataBase()<<obj.return_publish_time()<<endl;
+		}); 
+	 }
+	     outc.close();
+	
+    	ofstream outd;// Islamice Book's
+    	outd.open("Data_Base/islamicBooks.text",ios_base::out);
+    	if(!outd.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
+	if(!LibI.empty()){
+    	        for_each(LibI.begin(),LibI.end(),[&outd](auto obj){
+    		       outd<<obj.To_DataBase()<<obj.return_publish_time()<<endl;
+		});  
 	}
-	if(!LibM.empty()){// Medical Book's
-    	ofstream out;
-    	out.open("Data_Base/medicalBooks.text",ios_base::out);
-    	if(!out.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
-    	for_each(LibM.begin(),LibM.end(),[&out](auto obj){
-    		out<<obj.To_DataBase()<<endl;
-		});  out.close();
-	} else{
-		ofstream out;
-    	        out.open("Data_Base/medicalBooks.text",ios_base::out);
-    	        out.close();
-	}
-	if(!LibH.empty()){// History book's
-    	ofstream out;
-    	out.open("Data_Base/HistoryBooks.text",ios_base::out);
-    	if(!out.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
-    	for_each(LibH.begin(),LibH.end(),[&out](auto obj){
-    		out<<obj.To_DataBase()<<obj.return_publish_time()<<endl;
-		}); out.close();
-	}else{
-		ofstream out;
-    	        out.open("Data_Base/HistoryBooks.text",ios_base::out);
-    	        out.close();
-	}
-	if(!LibI.empty()){// Islamice Book's
-    	ofstream out;
-    	out.open("Data_Base/islamicBooks.text",ios_base::out);
-    	if(!out.is_open()) {cout<<"Progarming Lib File Not Find"<<endl; exit(0);}
-    	for_each(LibI.begin(),LibI.end(),[&out](auto obj){
-    		out<<obj.To_DataBase()<<obj.return_publish_time()<<endl;
-		});  out.close();
-	}else{
-		ofstream out;
-    	        out.open("Data_Base/islamicBooks.text",ios_base::out);
-    	        out.close();
-	}
+	outd.close();
+	
 } // Main
 /* Func for Fetch Data From File*/
  void GET_Programing_Books(vector<Programing_Books> &vec){// get Data From File
