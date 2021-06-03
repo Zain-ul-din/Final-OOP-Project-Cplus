@@ -1,0 +1,8 @@
+#include<iostream> // i/o 
+#include<string>  // getline & push_back
+#include<sstream> // string stream
+#include<fstream> // ifstream & ofstream
+#include<time.h> // ctime & time_t &timeNow
+#include<vector> // Vector & Push_Back & Pop Back
+#include<algorithm> // C++ Build in Algorithm's (For_each)
+#include<iomanip>// SetW & setfill
