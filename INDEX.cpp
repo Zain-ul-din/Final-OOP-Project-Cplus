@@ -395,6 +395,7 @@ class Islamic_Books : public Library{
 	template<class T> // this Single Func is UseFul for Every Class
 	void Mofiy_Book(T &vec){
 		int id,choice;
+		string str,Time;
 		cout<<"\t Enter Id of Book _ ";
 		cin>>id;
 		auto it = GetBookBYid(vec.begin(),vec.end(),id);
@@ -438,9 +439,12 @@ class Islamic_Books : public Library{
 		  	cout<<"\tSet SuccessFully"<<endl;
 		  break;
 		  case 4:// set Time to Now
-		  	time_t TimeNow;
+		  	time_t TimeNow;// Time Now
 		  	time(&TimeNow);// set Time Acording to System
-		  	it->set_time(ctime(&TimeNow));
+			 str = ctime(&TimeNow);// temp
+			for(auto it = str.begin() ; it != (str.begin()+24) ; it++)
+				Time.push_back(*it);// Copy Time into NEW Str
+		  	it->set_time(Time);
 		  	cout<<"\t New Time Set SucessFully : "<<ctime(&TimeNow)<<endl; 
 		  break;
 		  case 5:// Add At
@@ -958,7 +962,7 @@ int main(){
 	}
 	else{ // No thing found in File
 	   in.close();
-		cout<<"No Data in MedicalBooks Library Data_Base Please Enter 5 Books to Continue"<<endl;
+		cout<<"No Data in History Books Library Data_Base Please Enter 5 Books to Continue"<<endl;
 		for(int i=0;i<5;++i){
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_HistoryBook(vec);// Add Book
@@ -986,9 +990,9 @@ int main(){
 		}
 		in.close();
 	}
-	else{ // No thing found in File
-	    in.close();
-		cout<<"No Data in MedicalBooks Library Data_Base Please Enter 5 Books to Continue"<<endl;
+     else{ // No thing found in File
+	        in.close();
+		cout<<"No Data in Islamic Books Library Data_Base Please Enter 5 Books to Continue"<<endl;
 		for(int i=0;i<5;++i){
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_IslamicBook(vec);// Add Book
