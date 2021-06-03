@@ -536,6 +536,8 @@ class Islamic_Books : public Library{
 		else cout<<"\t!!Invalid Choice "<<endl;
   	  	Ask_BookIssue(vec); // I Issue Book
 	}
+ /* File Emp Test */
+ bool is_Empty(std::ifstream& pFile){return pFile.peek() == ifstream::traits_type::eof();}
 // Driver Code
 int main(){
    //	var 
@@ -878,7 +880,7 @@ int main(){
 	//Data_Base/  for test Remove this
 	in.open("Data_Base/ProgramingBooks.text",ios_base::in);
 	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
-	if(!in.eof()){// if Data Present in File
+	if(!is_Empty(in)){// if Data Present in File
 		while(getline(in,var[0],'$')){// title writernam id bool language time
 			for(int i=1;i<6;i++)
 			  getline(in,var[i],'$');
@@ -908,7 +910,7 @@ int main(){
 	ifstream in;// Fstream obj
 	in.open("Data_Base/medicalBooks.text",ios_base::in);// Remove for test
 	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
-	if(!in.eof()){// read Data if Data Present
+	if(!is_Empty(in)){// read Data if Data Present
 		while(getline(in,var[0],'$')){
 			for(int i=1;i<6;i++)
 			  getline(in,var[i],'$');
@@ -938,7 +940,7 @@ int main(){
 	ifstream in;// Fstream obj
 	in.open("Data_Base/HistoryBooks.text",ios_base::in);// remove for test
 	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
-	if(!in.eof()){
+	if(!is_Empty(in)){
 			// title$writer$id$totalqt$stock$time
 		while(getline(in,var[0],'$')){
 			for(int i=1;i<5;i++)
@@ -969,7 +971,7 @@ int main(){
 	ifstream in;// Fstream obj
 	in.open("Data_Base/islamicBooks.text",ios_base::in);
 	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
-	if(!in.eof()){// If Data Prsent in File
+	if(!is_Empty(in)){// If Data Prsent in File
 		while(getline(in,var[0],'$')){
 			for(int i=1;i<5;i++)
 			  getline(in,var[i],'$');
@@ -995,4 +997,3 @@ int main(){
 	}// else
   }   
         //  Name$writer$id$bool$VAR$Time Data Format in Files
-   /*     End   */
