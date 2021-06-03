@@ -993,10 +993,6 @@ int main(){
 		   system("cls");
 	    }// for
 	}// else
-  }   //  Name$writer$id$bool$VAR$Time Data Format in Files
-/* Data Base 
-   * Data_Base/ProgramingBooks.text  (Programing Books)
-   * Data_Base/medicalBooks.text      (Medical Books)
-   * Data_Base/HistoryBooks.text      (History Books)
-   * Data_Base/islamicBooks.text      (Islamic Books)
-*/
+  }   
+        //  Name$writer$id$bool$VAR$Time Data Format in Files
+   /*     End   */
