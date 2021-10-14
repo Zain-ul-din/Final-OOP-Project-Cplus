@@ -542,6 +542,39 @@ class Islamic_Books : public Library{
 	}
  /* File Emp Test */
  bool is_Empty(std::ifstream& pFile){return pFile.peek() == ifstream::traits_type::eof();}
+  enum FileType{
+ 	Islamicbooks_File,
+ 	MedicalBooks_File,
+ 	HistoryBooks_File,
+ 	ProgramingBooks_File
+ };
+ void MakeDirs(FileType fileType,bool isContainDir=true){
+ 	cout<<"\nData Base Not Found Program is trying to make new data base please Wait .. "<<endl;
+ 	cout<<"You may need to put some books for intial Setup !"<<endl;
+ 	cout<<"\n\n \t\t\t\tLOADING ... \t\t\t"<<endl;
+ 	
+ 	
+    
+ 	
+ 	if(not isContainDir)
+ 	 system("mkdir Data_Base");
+ 	// Testing
+ 	fstream fs;
+ 	switch(fileType){
+ 		case FileType::ProgramingBooks_File:
+ 	        fs.open("Data_Base/ProgramingBooks.text",ios_base::out);
+ 			 return;
+ 		case FileType::HistoryBooks_File:
+ 	        fs.open("Data_Base/HistoryBooks.text",ios_base::out);	
+ 			  return;
+ 		case FileType::Islamicbooks_File:
+ 	        fs.open("Data_Base/islamicBooks.text",ios_base::out);
+ 			  return;
+ 		case FileType::MedicalBooks_File:
+ 	        fs.open("Data_Base/medicalBooks.text",ios_base::out);
+ 			  return;
+	}
+ }
 // Driver Code
 int main(){
    //	var 
@@ -892,7 +925,7 @@ int main(){
 	string var[7];
 	//Data_Base/  for test Remove this
 	in.open("Data_Base/ProgramingBooks.text",ios_base::in);
-	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
+	if(!in.is_open()){cout<<"DataBase Error"<<endl;  MakeDirs(FileType::ProgramingBooks_File,false);} // If File not Found
 	if(!is_Empty(in)){// if Data Present in File
 		while(getline(in,var[0],'$')){// title writernam id bool language time
 			for(int i=1;i<6;i++)
@@ -910,8 +943,8 @@ int main(){
 	}
 	else { // No thing found in File
 	    in.close();
-		cout<<"No Data in Programingbooks Library Data_Base Please Enter 5 Books to Continue"<<endl;
-		for(int i=0;i<5;++i){// For 5 Times
+		cout<<"\t\t !!!! No Data Found in Programingbooks Library Data_Base Please Enter 1 Books to Continue"<<endl;
+		for(int i=0;i<1;++i){// For 2 Times
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_ProgramingBook(vec);// Add Book
 		   system("cls");
@@ -922,7 +955,7 @@ int main(){
     string var[7]; 
 	ifstream in;// Fstream obj
 	in.open("Data_Base/medicalBooks.text",ios_base::in);// Remove for test
-	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
+	if(!in.is_open()){cout<<"DataBase Error"<<endl; MakeDirs(FileType::MedicalBooks_File);} // If File not Found
 	if(!is_Empty(in)){// read Data if Data Present
 		while(getline(in,var[0],'$')){
 			for(int i=1;i<6;i++)
@@ -940,8 +973,8 @@ int main(){
 	 }
 	 else{ // No thing found in File
 	    in.close();
-		cout<<"No Data in MedicalBooks Library Data_Base Please Enter 5 Books to Continue"<<endl;
-		for(int i=0;i<5;++i){
+		cout<<"\t\t !!!! No Data Found in MedicalBooks Library Data_Base Please Enter 1 Books to Continue"<<endl;
+		for(int i=0;i<1;++i){
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_MedicalBook(vec);// Add Book
 		   system("cls");
@@ -952,7 +985,7 @@ int main(){
     string var[6]; 
 	ifstream in;// Fstream obj
 	in.open("Data_Base/HistoryBooks.text",ios_base::in);// remove for test
-	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
+	if(!in.is_open()){cout<<"DataBase Error"<<endl; MakeDirs(FileType::HistoryBooks_File);} // If File not Found
 	if(!is_Empty(in)){
 			// title$writer$id$totalqt$stock$time
 		while(getline(in,var[0],'$')){
@@ -971,8 +1004,8 @@ int main(){
 	}
 	else{ // No thing found in File
 	   in.close();
-		cout<<"No Data in History Books Library Data_Base Please Enter 5 Books to Continue"<<endl;
-		for(int i=0;i<5;++i){
+		cout<<"\t\t !!!! No Data Found in History Books Library Data_Base Please Enter 1 Books to Continue"<<endl;
+		for(int i=0;i<1;++i){
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_HistoryBook(vec);// Add Book
 		   system("cls");
@@ -983,7 +1016,7 @@ int main(){
     string var[6]; 
 	ifstream in;// Fstream obj
 	in.open("Data_Base/islamicBooks.text",ios_base::in);
-	if(!in.is_open()){cout<<"DataBase Error"<<endl; exit(0);} // If File not Found
+	if(!in.is_open()){cout<<"DataBase Error"<<endl; MakeDirs(FileType::Islamicbooks_File);} // If File not Found
 	if(!is_Empty(in)){// If Data Prsent in File
 		while(getline(in,var[0],'$')){
 			for(int i=1;i<5;i++)
@@ -1001,8 +1034,8 @@ int main(){
 	}
      else{ // No thing found in File
 	        in.close();
-		cout<<"No Data in Islamic Books Library Data_Base Please Enter 5 Books to Continue"<<endl;
-		for(int i=0;i<5;++i){
+		cout<<"\t\t !!!! No Data Found in Islamic Books Library Data_Base Please Enter 1 Books to Continue"<<endl;
+		for(int i=0;i<1;++i){
 		   cout<<"Enter Book -- "<<i+1<<endl;
 		   Add_IslamicBook(vec);// Add Book
 		   system("cls");
