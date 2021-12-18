@@ -1046,6 +1046,7 @@ int main(){
 
 /*
 // After 6 Month DSA Progress
+
 // Helper Class
 template<class T>
 class Node{
@@ -1062,8 +1063,8 @@ public:
          tail = nullptr;
      }
 
-     // Push Back
-     void Push_Back(T& data){
+     // Push
+     void Push(T& data){
          Node<T>* newNode = new Node<T>{data , nullptr , nullptr};
 
          // null case
@@ -1078,8 +1079,8 @@ public:
          head = newNode;
      }
 
-     //Push Top
-     void Push(T& data){
+     //Push Back
+     void Push_Back(T& data){
          Node<T>* newNode = new Node<T>{data , nullptr , nullptr};
 
          // null case
@@ -1102,11 +1103,11 @@ public:
              Push_Back(data);
              return;
          }
-
+         cout<<"I have Control"<<endl;
          Node<T>* newNode = new Node<T>{data , nullptr , nullptr};
 
          newNode->next = node->next;
-         newNode->prev = node->prev;
+         newNode->prev = node;
 
          node->next->prev = newNode;
          node->next = newNode;
@@ -1123,14 +1124,14 @@ public:
          Node<T>* newNode = new Node<T>{data , nullptr , nullptr};
 
          newNode->prev = node->prev;
-         newNode->next = node->next;
+         newNode->next = node;
 
          node->prev->next = newNode;
          node->prev = newNode;
      }
 
      /* Deletion From linkedList */
-
+/*
      // Deletes N Node
      void Remove(Node<T>* node){
 
@@ -1194,9 +1195,9 @@ public:
              return nullptr;// On Not Found
          }
      }
-
+*/
      /* Utilities Functions */
-
+/*
      // returns linkedlist is empty
      bool IsEmpty() const{ return head == nullptr && tail == nullptr;}
 
@@ -1218,4 +1219,13 @@ public:
 private:
     Node<T> *head , *tail;
 };
+
+int main(){
+    DLinkedList<int> dLinkedList;
+    int e(2) , e1(3) , e2(6) , e3(7);
+    dLinkedList.Push_Back(e);
+    dLinkedList.Push(e2);
+    dLinkedList.Push_Before(dLinkedList.IsContainNode(e2) , e1);
+    dLinkedList.Display();
+}
 */
