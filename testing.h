@@ -12,4 +12,13 @@ void DoTesting () {
     std::cout << "Success!" << std::endl;
 }
 
+template <class CallBack>
+class TestingLib {
+public:
+    // do test here
+    private :
+    vector<CallBack> callbacks;
+};
+
+
 #endif // TESTING_H
