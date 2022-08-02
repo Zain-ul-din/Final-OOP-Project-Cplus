@@ -4,7 +4,40 @@
 
 
 #include <iostream>
-#include <assert>
+#include <assert.h>
+#include <functional>
+#include <vector>
+
+/*
+  Custom Event Like c#
+*/
+template <class RETURN_TYPE, class... ARGS>
+class Event final {
+  public:
+
+   Event () { m_listeners.clear();}
+   
+   void operator += (std::function<RETURN_TYPE(ARGS...)> func) { m_functions.push_back(func); } // addds event to list of functions
+
+    // remove event from list of funtions
+    void operator -= (std::function<RETURN_TYPE(ARGS...)> func) {
+      for (int i = 0; i < m_functions.size(); i++) {
+         if (m_functions[i] == func) {
+            m_functions.erase(m_functions.begin() + i);
+         }
+      }
+    }
+    
+    // fire event
+    void Invoke (ARGS... args) {
+      for (int i = 0; i < m_functions.size(); i++) 
+         m_functions[i](args...);
+    }
+
+    ~Event () { m_listeners.clear();}
+  private:
+    std::vector <std::function<RETURN_TYPE(ARGS...)>> m_listeners;
+}
 
 void DoTesting () {
     std::cout << "Testing..." << std::endl;
