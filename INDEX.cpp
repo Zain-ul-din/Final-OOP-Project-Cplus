@@ -575,6 +575,61 @@ class Islamic_Books : public Library{
  			  return;
 	}
  }
+
+/*
+  TODOS : Make this work
+*/
+static void PrintWelcomeText () {
+	std::cout << "Welcome to Book Store" << std::endl;
+	std::cout << "Please select an option" << std::endl;
+	std::cout << "1. Add Book" << std::endl;
+	std::cout << "2. Remove Book" << std::endl;
+	std::cout << "3. Display All Books" << std::endl;
+	std::cout << "4. Display Book By ID" << std::endl;
+	std::cout << "5. Display Book By Name" << std::endl;
+	std::cout << "6. Issue Book" << std::endl;
+	std::cout << "7. Return Book" << std::endl;
+	std::cout << "8. Display Issued Books" << std::endl;
+	std::cout << "9. Display Returned Books" << std::endl;
+	std::cout << "10. Display All Books By Section" << std::endl;
+	std::cout << "11. Display All Books By Section With Issue" << std::endl;
+	std::cout << "12. Display All Books By Section With Return" << std::endl;
+	std::cout << "13. Display All Books By Section With Issue And Return" << std::endl;
+	std::cout << "14. Display All Books By Section With Issue And Return And Book Name" << std::endl;
+	std::cout << "15. Display All Books By Section With Issue And Return And Book Name And ID" << std::endl;
+	std::cout << "16. Display All Books By Section With Issue And Return And Book Name And ID And Section" << std::endl;
+	std::cout << "17. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author" << std::endl;
+	std::cout << "18. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher" << std::endl;
+	std::cout << "19. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price" << std::endl;
+	std::cout << "20. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity" << std::endl;
+	std::cout << "21. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section" << std::endl;
+	std::cout << "22. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "23. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher" << std::endl;
+	std::cout << "24. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price" << std::endl;
+	std::cout << "25. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity" << std::endl;
+	std::cout << "26. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section" << std::endl;
+	std::cout << "27. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "28. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher" << std::endl;
+	std::cout << "29. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price" << std::endl;
+	std::cout << "30. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity" << std::endl;
+	std::cout << "31. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section" << std::endl;
+	std::cout << "32. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "33. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher" << std::endl;
+	std::cout << "34. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price" << std::endl;
+	std::cout << "35. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity" << std::endl;
+	std::cout << "36. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section" << std::endl;
+	std::cout << "37. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "38. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher" << std::endl;
+	std::cout << "39. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price" << std::endl;
+	std::cout << "40. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity" << std::endl;
+	std::cout << "41. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section" << std::endl;
+	std::cout << "42. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "43. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher" << std::endl;
+	std::cout << "44. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	std::cout << "45. Display All Books By Section With Issue And Return And Book Name And ID And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author And Publisher And Price And Quantity And Section And Author" << std::endl;
+	
+}
+
 // Driver Code
 int main(){
    //	var 
