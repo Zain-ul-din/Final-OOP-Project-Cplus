@@ -4,7 +4,7 @@
 
 
 #include <iostream>
-#include <assert>
+#include <assert.h>
 
 void DoTesting () {
     std::cout << "Testing..." << std::endl;
