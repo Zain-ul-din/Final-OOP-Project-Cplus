@@ -10,6 +10,13 @@
 
 /*
   Custom Event Like c#
+  USAGE:
+    Event<void(int)> event;
+    event.Add([] (int i) {
+      std::cout << i << std::endl;
+    });
+    event.Invoke(5);
+    // Enjoy the output
 */
 template <class RETURN_TYPE, class... ARGS>
 class Event final {
@@ -44,5 +51,7 @@ void DoTesting () {
     assert(1 == 1);
     std::cout << "Success!" << std::endl;
 }
+
+
 
 #endif // TESTING_H
