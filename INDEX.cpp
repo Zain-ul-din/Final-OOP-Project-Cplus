@@ -443,7 +443,7 @@ GameManager* GameManager::instance = nullptr;
 
 // Driver Code
 int main () {
-	GAME->InitGame();
+    GAME->InitGame();
     GAME->StartGame();
 }
 #undef GAME
