@@ -6,3 +6,6 @@
  >  ease maintenance, error handling completeaccording  to an articulated strategy, and performance close tooptimal so as not to temptpeople to 
  >  make the code messy with unprincipled optimizations. Clean code does one thing well.
 
+ # USAGE
+ > Clone Repo and compile `index.cpp`
+
