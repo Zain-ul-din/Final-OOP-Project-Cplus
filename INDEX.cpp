@@ -1,7 +1,7 @@
 /*
    @open Source
-   Tic Tac Toc Game in c++
-   -- MIT License
+     Tic Tac Toc Game in c++
+     -- MIT License
 */
 
 #if __cplusplus < 201103L
