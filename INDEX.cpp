@@ -4,7 +4,7 @@
      -- MIT License
 */
 
-#if __cplusplus < 201103 L
+#if __cplusplus < 201103L
 #error "Cplus 11 requied"
 #endif
 
@@ -14,8 +14,8 @@
 #include <algorithm> // c build in algo's
 #include <cmath> // math stuff
 #include <windows.h> // windows apis like, keyboard btn click
-#include < conio.h > // get char
-#include < thread > // cplus 11 multi threading and thread sleep
+#include <conio.h> // get char
+#include <thread> // cplus 11 multi threading and thread sleep
 #include <chrono> // cplus system time
 #include <functional> // cplus 11 functions
 
