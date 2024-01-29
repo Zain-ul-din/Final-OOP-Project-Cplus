@@ -4,10 +4,6 @@
      -- MIT License
 */
 
-#if __cplusplus < 201103L
-#error "Cplus 11 requied"
-#endif
-
 #include <iostream> // std io
 #include <string> // std string
 #include <vector> // std vector
